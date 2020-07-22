@@ -1,1 +1,10 @@
-<p>protected works!</p>
+<h1>Perfil de usuario</h1>
+
+<br>
+
+<!-- Aqui esperamos a que el Observable userProfile$ se resuelva, indicamos que es una operacion asincrona y usamos el alias profile para manejar la respuesta de dicha operacion -->
+<pre *ngIf="auth.userProfile$ | async as profile">
+
+    <code>{{ profile | json }}</code>
+
+</pre>
